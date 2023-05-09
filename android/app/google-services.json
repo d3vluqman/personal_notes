@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "259557209560",
+    "project_id": "flutter-personalnotes",
+    "storage_bucket": "flutter-personalnotes.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:259557209560:android:afd2fedeb12fd392666ead",
+        "android_client_info": {
+          "package_name": "com.devluqman.personalnotes"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "259557209560-vorq5ndd9tlog1vn6luqhe4g15kbus9o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCNHgGK4DvTQKjTTIEEyGSCBNLWYvEN97U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "259557209560-vorq5ndd9tlog1vn6luqhe4g15kbus9o.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
