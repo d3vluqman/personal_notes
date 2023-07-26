@@ -3,8 +3,6 @@ import 'package:personalnotes/services/auth/auth_provider.dart';
 import 'package:personalnotes/services/auth/auth_user.dart';
 import 'package:personalnotes/services/auth/firebase_auth_provider.dart';
 
-import '../../firebase_options.dart';
-
 class AuthService implements AuthProvider {
   final AuthProvider provider;
   const AuthService(this.provider);
