@@ -19,7 +19,10 @@ class NotesService {
       final dbPath = join(docsPath.path, dbName);
       final db = await openDatabase(dbPath);
       _db = db;
-      
+
+      await db.execute(createUserTable);
+
+      await db.execute(createNoteTable);
     } on MissingPlatformDirectoryException {
       throw UnableToGetDocumentDirectory();
     }
@@ -88,3 +91,17 @@ const emailColumn = "email";
 const userIdColumn = "user_id";
 const textColumn = "text";
 const isSyncedWithCloudColumn = "is_synced_with_cloud";
+
+const createUserTable = '''CREATE TABLE IF NOT "user" (
+	      "id"	INTEGER NOT NULL,
+	      "email"	TEXT NOT NULL UNIQUE,
+	      PRIMARY KEY("id" AUTOINCREMENT)
+      );''';
+
+const createNoteTable = '''CREATE TABLE IF NOT "note" (
+	      "id"	INTEGER NOT NULL,
+	      "user_id"	INTEGER NOT NULL,
+	      "text"	TEXT NOT NULL,
+	      PRIMARY KEY("id" AUTOINCREMENT),
+	      FOREIGN KEY("user_id") REFERENCES "user"("id")
+      );''';
